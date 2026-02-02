@@ -261,3 +261,158 @@ li > a:hover {
     background: var(--tertiary-color);
     border: 1px solid var(--tertiary-color);
 }
+
+/* SERVICES SECTION */
+
+#services {
+    width: 100%;
+    height: 81vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.top-content {
+    height: 129px;
+    width: 100%;
+    margin-bottom: 575px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-title {
+    width: 319px;
+    margin-top: 45px;
+    margin-left: 128px;
+}
+
+.services-title h1 {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    color: var(--secondary-color);
+}
+
+.services-title p {
+    width: 318px;
+    font-family: var(--tertiary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--secondary-color);
+}
+
+.arrow-btn.services:hover {
+    background: var(--tertiary-color);
+}
+
+.services-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    width: 1472px;
+    height: 345px;
+    gap: 132px;
+    margin-top: 150px;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 49px 33px;
+    background: none;
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    width: 268px;
+    height: 345px;
+    gap: 12px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.services-card:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: rotateZ(1deg) rotateY(10deg) scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 27px 11px rgba(192, 84, 38, 0.082), 0px 15px 9px rgba(192, 84, 38, 0.089), 0px 7px 7px rgba(192, 84, 38, 0.09), 0px 2px 4px rgba(192, 84, 38, 0.1);
+}
+
+.services-card:hover h1,
+.services-card:hover p,
+.services-card:hover span {
+    color:  var(--primary-color);
+}
+
+.services-card svg {
+    width: 98px;
+    height: 98px;
+    display: flex;
+}
+
+.services-card h1 {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--secondary-color);
+    padding-top: 20px;
+    transform: all 0.3s ease-in;
+}
+
+.services-card p {
+    font-family: var(--tertiary-font);
+    width: 199px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(228, 228, 228, 0.692);
+    transform: all 0.3s ease-in;
+}
+
+.services-card span {
+    font-family: var(--tertiary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--secondary-color);
+    margin-top: 20px;
+    transform: all 0.3s ease-in;
+}
+
+.svgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hair-clipper {
+    transform: rotate(-45deg);
+    margin-left: -10px;
+}
+
+.razor {
+    transform: translate(0%, 15%) rotate(45deg);
+    margin-right: -10px;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
