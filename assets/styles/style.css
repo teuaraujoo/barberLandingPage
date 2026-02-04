@@ -598,6 +598,7 @@ li > a:hover {
     z-index: 1;
     transition: opacity 0.3s ease;
     pointer-events: none;
+    inset: 0;
 }
 
 .parent div i {
@@ -639,6 +640,129 @@ li > a:hover {
 
 #review {
     width: 100%;
+    overflow: hidden;
+    position: relative;
     height: 81vh;
+    display: flex;
+    flex-direction: column;
+    gap: 61px;
+    background-color: var(--primary-color);
 }
 
+.review-top-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-title {
+    width: 319px;
+    margin-top: 45px;
+    margin-left: 128px;
+}
+
+.review-title h1 {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    color: var(--secondary-color);
+}
+
+.review-title p {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(228, 228, 228, 0.692);
+}
+
+.review-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    height: 280px;
+    margin-top: 56px;
+    box-sizing: border-box;
+}
+
+.review-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 280px;
+    background: none;
+    padding: 33px 48px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.review-cards::before {
+        content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: inherit;
+    background: linear-gradient(to right bottom, #7c7c7c, #6d6d6d, #a6a6a6, #e4e4e4);
+    mask: none;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.review-cards-infos {
+    display: flex;
+    align-items: center;
+    gap: 191px;
+    margin-top: 20px;
+}
+
+.review-cards-infos h3 {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--tertiary-color);
+}
+
+.review-cards-infos a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: rgba(228, 228, 228, 0.733);
+    transition: all 0.3s ease;
+}
+
+.review-cards-infos a:hover {
+    color: white;
+}
+
+.review-cards p {
+    font-family: var(--tertiary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--secondary-color);
+    margin-top: 18px;
+    margin-bottom: 14px;
+}
