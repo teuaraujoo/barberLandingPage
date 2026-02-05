@@ -37,21 +37,6 @@
 <body>
     <!-- hero section - wrapper for background -->
     <div class="hero-wrapper">
-        <!-- SOMBRA -->
-        <svg class="hero-shadow" width="1064" height="1317" viewBox="0 0 1064 1317" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_f_73_168)">
-                <rect x="100" y="100" width="864" height="1117" fill="black" fill-opacity="0.8" />
-            </g>
-            <defs>
-                <filter id="filter0_f_73_168" x="0" y="0" width="1064" height="1317" filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_73_168" />
-                </filter>
-            </defs>
-        </svg>
         <!-- HEADER / NAVBAR -->
         <header>
             <div class="logo">
@@ -99,9 +84,9 @@
     <section id="services">
         <!-- TOP PART -->
         <div class="top-content">
-            <div class="services-title">
-                <h1>SERVIÇOS</h1>
-                <p>Veja os tipos de serviços que temos disponíveis</p>
+            <div class="title-container">
+                <h1 class="title">SERVIÇOS</h1>
+                <p class="subtitle">Veja os tipos de serviços que temos disponíveis</p>
             </div>
             <a class="arrow-btn services" href="#">
                 Marque se corte
@@ -200,59 +185,42 @@
     </section>
 
     <!-- ABOUT US -->
-    <div class="about-wrapper">
-        <svg class="about-shadow" width="1064" height="1317" viewBox="0 0 1064 1317" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_f_101_74)">
-                <rect x="100" y="100" width="864" height="1117" fill="black" fill-opacity="0.8" />
-            </g>
-            <defs>
-                <filter id="filter0_f_101_74" x="0" y="0" width="1064" height="1317" filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feGaussianBlur stdDeviation="0" result="effect1_foregroundBlur_101_74" />
-                </filter>
-            </defs>
-        </svg>
-
-        <section id="about">
-            <div class="about-content">
-                <div class="about-title">
-                    <h1>SOBRE NÓS</h1>
-                    <p>Conheça um pouco da nossa história</p>
+    <section id="about">
+        <div class="about-content">
+            <div class="title-container about">
+                <h1 class="title about">SOBRE NÓS</h1>
+                <p class="subtitle about">Conheça um pouco da nossa história</p>
+            </div>
+            <div class="about-text">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the
+                    printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stats">
+                    <h3>+800</h3>
+                    <p>Clientes atendidos</p>
                 </div>
-                <div class="about-text">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the
-                        printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-                        since the 1500s.
-                    </p>
+                <div class="stats">
+                    <h3>+2</h3>
+                    <p>anos de história</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stats">
-                        <h3>+800</h3>
-                        <p>Clientes atendidos</p>
-                    </div>
-                    <div class="stats">
-                        <h3>+2</h3>
-                        <p>anos de história</p>
-                    </div>
-                    <div class="stats">
-                        <h3>45min</h3>
-                        <p>Cuidando de você</p>
-                    </div>
+                <div class="stats">
+                    <h3>45min</h3>
+                    <p>Cuidando de você</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- GALERIA -->
     <section id="galery">
-        <div class="galery-title">
-            <h1>GALERIA</h1>
-            <p>Veja alguns dos nossos cortes no mês</p>
+        <div class="title-container galery">
+            <h1 class="title">GALERIA</h1>
+            <p class="subtitle">Veja alguns dos nossos cortes no mês</p>
         </div>
         <div class="parent">
             <div class="div1"><a href="#"><img src="./assets/images/Galery Card-1.png" alt="Foto Corte1"> <i
@@ -275,10 +243,10 @@
     </section>
 
     <section id="review">
-        <div class="review-top-content">
-            <div class="review-title">
-                <h1>AVALIAÇÕES</h1>
-                <p>Veja o que os clientes pensam sobre nós</p>
+        <div class="top-content review">
+            <div class="title-container">
+                <h1 class="title">AVALIAÇÕES</h1>
+                <p class="subtitle">Veja o que os clientes pensam sobre nós</p>
             </div>
             <a class="arrow-btn services" href="#">
                 Marque se corte
@@ -388,12 +356,13 @@
             </div>
         </div>
     </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact">
         <!-- TÍTULO -->
-        <div class="contact-top-content">
-            <h1>GOSTOU? MARQUE UMA VISITA</h1>
+        <div class="top-content contact">
+            <h1 class="title contact">GOSTOU? MARQUE UMA VISITA</h1>
             <div class="logo-contact">
-
                 <a href="#"><img src="./assets/images/LOGO.png" alt="Logo Barbearia"></a>
             </div>
         </div>
@@ -450,8 +419,10 @@
             </p>
             <!-- ICONS -->
             <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/teuaraujoo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/teu.araujoo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/teuaraujoo/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/teu.araujoo/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
                 <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
