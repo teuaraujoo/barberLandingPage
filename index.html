@@ -35,6 +35,9 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <img class="logo-loader" src="./assets/images/LOGO.ico" alt="Logo Teteu Barber">
+    </div>
     <!-- hero section - wrapper for background -->
     <div class="hero-wrapper">
         <!-- HEADER / NAVBAR -->
@@ -44,13 +47,18 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li class="home-a"><a href="#home">Home</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#galery">Galeria</a></li>
                     <li><a href="#review">Clientes</a></li>
                 </ul>
             </nav>
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <a href="#" class="arrow-btn">
                 Entre em contato
                 <!-- ARROW --> <!-- stroke = currentColor faz com que a seta herde a cor do texto -->
@@ -85,7 +93,7 @@
         <!-- TOP PART -->
         <div class="top-content">
             <div class="title-container">
-                <h1 class="title">SERVIÇOS</h1>
+                <h1 class="title reveal">SERVIÇOS</h1>
                 <p class="subtitle">Veja os tipos de serviços que temos disponíveis</p>
             </div>
             <a class="arrow-btn services" href="#">
@@ -427,6 +435,10 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script type="module" src="./assets/script/main.js"></script>
 </body>
 
 </html>

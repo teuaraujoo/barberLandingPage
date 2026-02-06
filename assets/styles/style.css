@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -23,6 +24,27 @@ html, body {
     --margin-top: 45px;
     --margin-sides: 128px;
     --border-radius: 50px;
+}
+
+/* LOADER */
+
+.preloader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 1.9s linear forwards;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.logo-loader {
+    position: fixed;
+    z-index: -3;
+    animation: fadeInLoader 1.35s linear;
 }
 
 /* TÍTULO + SUBTÍTULO */
@@ -56,9 +78,11 @@ html, body {
 ::-webkit-scrollbar-track {
     background-color: var(--secondary-color);
 }
+
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--tertiary-color);
     border-radius: var(--border-radius);
@@ -71,7 +95,7 @@ html, body {
     min-height: 100vh;
     background: url("../images/FotoHero.png") center / cover no-repeat;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header,
@@ -84,7 +108,7 @@ header,
 
 header {
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,8 +131,8 @@ header {
     min-width: 438px;
     height: 59px;
     /* Efeito Liquid/Glass */
-    background: linear-gradient(180deg, rgba(102, 102, 102, 0.062) 0%, transparent 50%, rgba(102, 102, 102, 0.158) 100%), 
-            rgba(29, 29, 29, 0.144);
+    background: linear-gradient(180deg, rgba(102, 102, 102, 0.062) 0%, transparent 50%, rgba(102, 102, 102, 0.158) 100%),
+        rgba(29, 29, 29, 0.144);
     background-blend-mode: plus-lighter, plus-lighter, color-burn, plus-lighter;
     /* Sombras internas para efeito 3D */
     box-shadow: inset 16px 16px 9px -20px #FFFFFF, inset -12px -12px 6px -14px #B3B3B3;
@@ -136,7 +160,7 @@ header {
     z-index: -1;
 }
 
-.navbar > ul {
+.navbar>ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +172,7 @@ header {
 
 /* ÂNCORAS */
 
-li > a {
+li>a {
     text-decoration: none;
     color: rgba(228, 228, 228, 0.89);
     font-family: var(--secondary-font);
@@ -159,7 +183,7 @@ li > a {
     transition: all 0.3s ease-in;
 }
 
-li > a:hover {
+li>a:hover {
     color: var(--secondary-color-hover);
 }
 
@@ -201,15 +225,38 @@ li > a:hover {
     transform: rotate(-45deg);
 }
 
+/* MENU HAMBURGUER */
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 25px;
+    z-index: 1;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #e4e4e4;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
 /* HOME SECTION */
 
 #home {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    z-index: 0;
 }
 
 /* TÍTULO E SUBTÍTULO */
@@ -229,7 +276,6 @@ li > a:hover {
 }
 
 .home-content p {
-    width: 374px;
     font-family: var(--tertiary-font);
     color: rgba(228, 228, 228, 0.733);
     font-style: normal;
@@ -238,6 +284,7 @@ li > a:hover {
     line-height: 18px;
     margin-top: 10px;
 }
+
 
 /* BOTÕES */
 
@@ -295,7 +342,7 @@ li > a:hover {
 
 #services {
     width: 100%;
-    height: 81vh;
+    min-height: 81vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,7 +364,7 @@ li > a:hover {
 .services-card-container {
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -344,7 +391,7 @@ li > a:hover {
 .services-card:hover h1,
 .services-card:hover p,
 .services-card:hover span {
-    color:  var(--primary-color);
+    color: var(--primary-color);
 }
 
 .services-card svg {
@@ -413,7 +460,7 @@ li > a:hover {
     min-height: 100vh;
     background: url("../images/FotoSobre.png") center / cover no-repeat;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #about::before {
@@ -423,23 +470,16 @@ li > a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.75) 55%,
-        rgba(0, 0, 0, 0.45) 65%,
-        rgba(0, 0, 0, 0.15) 85%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(to left,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.75) 55%,
+            rgba(0, 0, 0, 0.45) 65%,
+            rgba(0, 0, 0, 0.15) 85%,
+            rgba(0, 0, 0, 0) 100%);
 
-    filter: blur(2px); 
+    filter: blur(2px);
     pointer-events: none;
     z-index: 1;
-}
-
-#about, 
-.about-wrapper {
-    overflow: hidden;
 }
 
 .about-content {
@@ -522,7 +562,7 @@ li > a:hover {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .title-container.galery {
@@ -537,13 +577,13 @@ li > a:hover {
     margin-left: var(--margin-sides);
     margin-bottom: 53px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     isolation: isolate;
 }
 
 .parent div {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 0px 64px 26px rgba(179, 179, 179, 0.01), 0px 36px 22px rgba(173, 173, 173, 0.01), 0px 16px 16px rgba(217, 217, 217, 0.09), 0px 4px 9px rgba(217, 217, 217, 0.1);
     border-radius: 10px;
     width: 268px;
@@ -555,7 +595,7 @@ li > a:hover {
 .parent div img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;
     transition: opacity 0.3s ease;
 }
 
@@ -595,23 +635,49 @@ li > a:hover {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 1 / 2 / 2 / 3; }
-.div3 { grid-area: 1 / 3 / 2 / 4; }
-.div4 { grid-area: 1 / 4 / 2 / 5; }
-.div5 { grid-area: 5 / 1 / 6 / 2; }
-.div6 { grid-area: 5 / 2 / 6 / 3; }
-.div7 { grid-area: 5 / 3 / 6 / 4; }
-.div8 { grid-area: 5 / 4 / 6 / 5; }
-.div9 { grid-area: 5 / 4 / 6 / 5; }
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.div5 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.div6 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.div7 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.div8 {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.div9 {
+    grid-area: 5 / 4 / 6 / 5;
+}
 
 /* REVIEWS SECTION */
 
 #review {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
-    height: 81vh;
+    min-height: 81vh;
     display: flex;
     flex-direction: column;
     gap: 61px;
@@ -715,7 +781,7 @@ li > a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: url("../images/FotoContato.png") center / cover no-repeat;
 }
 
@@ -828,7 +894,7 @@ li > a:hover {
 
 /* FOOTER */
 
-.footer  {
+.footer {
     margin-top: 28px;
     margin-bottom: 35px;
     width: 100%;
@@ -849,7 +915,7 @@ li > a:hover {
 
 /* MY TAG */
 
-.footer p > a {
+.footer p>a {
     color: var(--tertiary-color);
     font-weight: 600;
 }
@@ -871,5 +937,164 @@ li > a:hover {
 
 .footer-icons i:hover {
     color: var(--tertiary-color);
-    transform: scale(0.98); 
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
+
+/* KEY FRAMES */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLoader {
+    0% {
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    25% {
+        opacity: 0.2;
+        scale: 0.2;
+    }
+
+    50% {
+        opacity: 0.4;
+        scale: 0.4;
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1440px){
+
+}
+
+@media (max-width: 1024px) {
+
+    /* MENU HAMBURGUER */
+
+    header {
+        padding: 0 20px;
+    }
+
+    .home-a {
+        display: none;
+    }
+
+    li>a {
+        color: rgba(228, 228, 228, 0.89);
+        font-family: var(--secondary-font);
+        font-size: 35px;
+        font-weight: 500;
+        transition: all 0.3s ease-in;
+    }
+
+    li>a:hover {
+        color: var(--tertiary-color);
+        font-size: 40px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 6vh;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 10vh);
+        background: rgba(29, 29, 29, 0.05);
+        backdrop-filter: blur(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition:
+            opacity 0.6s ease,
+            transform 0.6s ease,
+            visibility 0.35s;
+    }
+
+
+    .navbar.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .arrow-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    /* LOGO */
+    .logo {
+        margin-left: 25px;
+    }
+
+    /* MENU */
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 480px){
+    
 }
