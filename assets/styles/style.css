@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: var(--primary-color);
 }
 
 :root {
@@ -39,6 +40,15 @@ body {
     background-color: var(--primary-color);
     z-index: 100;
     pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .logo-loader {
@@ -94,9 +104,9 @@ body {
 /* BACKGROUND */
 .hero-wrapper {
     min-height: 100vh;
+    background-color: var(--primary-color);
     background: url("../images/FotoHero.png") center / cover no-repeat;
     position: relative;
-    /* overflow: hidden; */
 }
 
 header,
@@ -453,9 +463,9 @@ li>a:hover {
     flex-direction: column;
     align-items: end;
     min-height: 100vh;
+    background-color: var(--primary-color);
     background: url("../images/FotoSobre.png") center / cover no-repeat;
     filter: brightness(110%);
-    /* overflow: hidden; */
 }
 
 #about::before {
@@ -776,7 +786,7 @@ li>a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
+    background-color: var(--primary-color);
     background: url("../images/FotoContato.png") center / cover no-repeat;
 }
 
@@ -968,7 +978,6 @@ li>a:hover {
 
     100% {
         opacity: 1;
-        display: none;
     }
 }
 
@@ -983,7 +992,6 @@ li>a:hover {
 
     100% {
         opacity: 0;
-        display: none;
     }
 }
 
@@ -1240,6 +1248,7 @@ li>a:hover {
 #about {
     min-height: 70vh;
     align-items: center;
+    background-color: var(--primary-color);
     background: url("../images/FotoSobre2.png") center / cover no-repeat;
 }
 

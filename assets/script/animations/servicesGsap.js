@@ -2,7 +2,11 @@
 
 export function servicesAnimate() {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.refresh();
+
+    // Delay do refresh para evitar flashes
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 2100);
 
     const tl = gsap.timeline({
         scrollTrigger: {

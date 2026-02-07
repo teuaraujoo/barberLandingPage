@@ -3,7 +3,7 @@ export function loader() {
 
     let preloader = document.querySelector(".preloader");
 
-    setTimeout(function () {
-        preloader.classList.remove(".preloader");
+    setTimeout(() => {
+        preloader.classList.add("loaded");
     }, 1800);
-}
+};
