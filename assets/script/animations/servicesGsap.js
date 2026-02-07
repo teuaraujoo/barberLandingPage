@@ -22,12 +22,14 @@ export function servicesAnimate() {
         .fromTo('.services-card', {
             autoAlpha: 0, //opacity : 0 and visible: hidden
             x: -60,
+            filter: "blur(5px)"
         },
         {
             x: 0,
             autoAlpha: 1,
             stagger: 0.25, //animações escalonadas ->  em degrau: delay de 0.25s para cada item
-            duration: 0.8,
+            duration: 0.6,
+            filter: "blur(0px)",
             clearProps: 'transform',
             ease: 'power2.out'
         },

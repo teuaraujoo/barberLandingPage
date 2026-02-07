@@ -380,7 +380,6 @@ li>a:hover {
     color: var(--primary-color);
     transform: rotateZ(1deg) rotateY(10deg) scale(1.1);
     cursor: pointer;
-    filter: drop-shadow(0px 4px 8px rgba(192, 84, 38, 0.45));
 }
 
 .services-card:hover h1,
@@ -456,7 +455,6 @@ li>a:hover {
     min-height: 100vh;
     background: url("../images/FotoSobre.png") center / cover no-repeat;
     filter: brightness(110%);
-    position: relative;
     /* overflow: hidden; */
 }
 
@@ -1098,7 +1096,6 @@ li>a:hover {
 @media (max-width: 1124px) {
 
     /* MENU HAMBURGUER */
-
     header {
         padding: 0 20px;
     }
@@ -1140,20 +1137,18 @@ li>a:hover {
             visibility 0.35s;
     }
 
-
     .navbar.active {
         opacity: 1;
         visibility: visible;
         transform: scale(1);
     }
 
-
     .navbar ul {
         flex-direction: column;
         gap: 100px;
     }
 
-    .arrow-btn {
+    .arrow-btn.home {
         display: none;
     }
 
@@ -1183,6 +1178,192 @@ li>a:hover {
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
     }
+
+.title {
+    font-size: 50px;
+}
+
+/* HOME SECTION */
+
+#home {
+    align-items: center;
+}
+
+/* TÍTULO E SUBTÍTULO */
+
+.home-content {
+    max-width: 506px;
+    margin-left: 0px;
+}
+
+.home-content h1 {
+    text-align: center;
+}
+
+.home-content p {
+    text-align: center;
+}
+
+/* BOTÕES */
+.home-buttons {
+    align-items: center;
+    margin-left: 0px;
+}
+
+
+/* BOTAO ENTRE EM CONTATO */
+.arrow-btn {
+    margin-right: 80px;
+}
+
+/* SERVICES SECTION */
+
+.title-container {
+    width: 35%;
+    margin-left: 128px;
+}
+
+.services-card-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    gap: 35px;
+    margin-bottom: var(--margin-top);
+    transition: all 0.6s;
+}
+
+.services-card:hover {
+    transform: rotateZ(0deg) rotateY(0deg) scale(1);
+}
+
+
+#about {
+    min-height: 70vh;
+    align-items: center;
+    background: url("../images/FotoSobre2.png") center / cover no-repeat;
+}
+
+#about::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.about-content {
+    margin-right: 0px;
+}
+
+
+.title-container.about {
+    margin-top: 90px;
+}
+
+.title.about {
+    text-align: center;
+}
+
+.subtitle.about {
+    text-align: center;
+}
+
+.about-text {
+    max-width: 55vw;
+}
+
+.about-text p {
+    text-align: center;
+}
+
+.stats {
+    align-items: center;
+    margin-bottom: var(--margin-top);
+}
+
+.stats h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* GALERIA */
+#galery {
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container.galery {
+    margin-left: 0px;
+}
+
+.title.galery {
+    text-align: center;
+}
+
+.subtitle.galery {
+    text-align: center;
+}
+
+.parent {
+    grid-column-gap: 70px;
+    margin-left: 0px;
+}
+
+.div3 {
+    display: none;
+}
+
+.div7 {
+    display: none;
+}
+
+/* REVIEWS SECTION */
+
+.top-content.review {
+    margin-bottom: 0px;
+}
+
+.review-cards-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 600px;
+}
+
+/* CONTACT SECTION */
+
+.top-content.contact {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.top-content.contact img {
+    display: none;
+}
+
+
+.title.contact {
+    width: 66%;
+    text-align: center;
+    margin-left: 0px;
+}
+
+/* CONTENT */
+
+.contact-container {
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+    gap: 10vh;
+}
+
+/* DIVISOR */
+
+.contact-divisor {
+    transform: scale(0.4);
+}
+
+.footer p {
+    width: 30%;
+}
+
 }
 
 @media (max-width: 768px){
