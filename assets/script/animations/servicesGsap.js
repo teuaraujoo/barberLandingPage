@@ -15,16 +15,16 @@ export function servicesAnimate() {
 
     tl.from('#services > .top-content', {
         opacity: 0,
-        y: 60,
+        x: -60,
         duration: 0.8,
         ease: 'expo.out'
     })
         .fromTo('.services-card', {
             autoAlpha: 0, //opacity : 0 and visible: hidden
-            y: 60,
+            x: -60,
         },
         {
-            y: 0,
+            x: 0,
             autoAlpha: 1,
             stagger: 0.25, //animações escalonadas ->  em degrau: delay de 0.25s para cada item
             duration: 0.8,

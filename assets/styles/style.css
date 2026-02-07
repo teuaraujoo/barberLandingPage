@@ -44,6 +44,7 @@ body {
 .logo-loader {
     position: fixed;
     z-index: -3;
+    pointer-events: none;
     animation: fadeInLoader 1.35s linear;
 }
 
@@ -138,8 +139,7 @@ header {
     box-shadow: inset 16px 16px 9px -20px #FFFFFF, inset -12px -12px 6px -14px #B3B3B3;
     border-radius: 32px;
     /* Backdrop blur */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     /* Sombra externa */
     filter: drop-shadow(0px 32px 40px rgba(0, 0, 0, 0.1));
 }
@@ -154,7 +154,6 @@ header {
     background: rgba(255, 255, 255, 0.01);
     mix-blend-mode: normal;
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     border-radius: var(--border-radius);
     pointer-events: none;
     z-index: -1;
@@ -171,7 +170,6 @@ header {
 }
 
 /* ÂNCORAS */
-
 li>a {
     text-decoration: none;
     color: rgba(228, 228, 228, 0.89);
@@ -188,7 +186,6 @@ li>a:hover {
 }
 
 /* BOTAO ENTRE EM CONTATO */
-
 .arrow-btn {
     text-decoration: none;
     color: var(--primary-color);
@@ -220,13 +217,11 @@ li>a:hover {
 }
 
 /* SETA */
-
 .arrow-icon {
     transform: rotate(-45deg);
 }
 
 /* MENU HAMBURGUER */
-
 .hamburger {
     display: none;
     background: none;
@@ -419,6 +414,7 @@ li>a:hover {
     font-size: 12px;
     line-height: 14px;
     color: rgba(228, 228, 228, 0.692);
+    text-align: center;
     transform: all 0.3s ease-in;
 }
 
@@ -459,6 +455,7 @@ li>a:hover {
     align-items: end;
     min-height: 100vh;
     background: url("../images/FotoSobre.png") center / cover no-repeat;
+    filter: brightness(110%);
     position: relative;
     /* overflow: hidden; */
 }
@@ -487,7 +484,7 @@ li>a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 8rem;
+    margin-right: 128px;
 }
 
 .title-container.about {
@@ -562,7 +559,7 @@ li>a:hover {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .title-container.galery {
@@ -577,17 +574,17 @@ li>a:hover {
     margin-left: var(--margin-sides);
     margin-bottom: 53px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     isolation: isolate;
 }
 
 .parent div {
     position: relative;
-    /* overflow: hidden; */
-    box-shadow: 0px 64px 26px rgba(179, 179, 179, 0.01), 0px 36px 22px rgba(173, 173, 173, 0.01), 0px 16px 16px rgba(217, 217, 217, 0.09), 0px 4px 9px rgba(217, 217, 217, 0.1);
+    overflow: hidden;
+    box-shadow: 0px 64px 26px rgba(121, 121, 121, 0.01), 0px 36px 22px rgba(126, 126, 126, 0.01), 0px 16px 16px rgba(217, 217, 217, 0.09), 0px 4px 9px rgba(150, 150, 150, 0.041);
+    max-width: 268px;
+    max-height: 345px;
     border-radius: 10px;
-    width: 268px;
-    height: 345px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -819,12 +816,11 @@ li>a:hover {
     align-items: center;
     background-blend-mode: plus-lighter, plus-lighter, color-burn, plus-lighter;
     box-shadow: inset 16px 16px 9px -20px #FFFFFF, inset -12px -12px 6px -14px #B3B3B3;
-    border-radius: 32px;
+    border-radius: 10px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     filter: drop-shadow(0px 32px 40px rgba(0, 0, 0, 0.1));
     background: none;
-    border-radius: 10px;
     padding: 49px 49px;
     color: var(--secondary-color);
 }
@@ -940,10 +936,6 @@ li>a:hover {
     transform: scale(0.98);
 }
 
-.hidden {
-    display: none;
-}
-
 /* KEY FRAMES */
 
 @keyframes fadeIn {
@@ -978,6 +970,7 @@ li>a:hover {
 
     100% {
         opacity: 1;
+        display: none;
     }
 }
 
@@ -992,6 +985,7 @@ li>a:hover {
 
     100% {
         opacity: 0;
+        display: none;
     }
 }
 
@@ -999,9 +993,109 @@ li>a:hover {
 
 @media (max-width: 1440px){
 
+.title-container {
+    width: 20%;
 }
 
-@media (max-width: 1024px) {
+.services-card {
+    padding: 39px 23px;
+    gap: 8px;
+}
+
+.services-card svg {
+    width: 78px;
+    height: 78px;
+}
+
+.services-card h1 {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.services-card p {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.services-card span {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+/* ABOUT SECTION */
+
+.title-container.about {
+    margin-bottom: 120px;
+}
+
+.about-text {
+    max-width: 35vw;
+    margin-bottom: 120px;
+}
+
+/* GALERIA */
+
+.parent {
+    grid-template-rows: 1fr repeat(3, minmax(1px, auto)) 1fr;
+    gap: 15px;
+}
+.div4 {
+    display: none;
+}
+
+.div8 {
+    display: none;
+}
+
+/* REVIEWS SECTION */
+.review-cards-container {
+    justify-content: space-evenly;
+}
+
+.review-cards.hidden {
+    display: none;
+}
+
+/* CONTACT SECTION */
+
+.title.contact {
+    font-size: 50px;
+    line-height: 60px;
+    width: 46%;
+    margin-left: 80px;
+}
+
+.top-content.contact img {
+    margin-right: 80px;
+}
+
+/* CONTENT */
+
+.contact-container {
+    gap: 5%;
+    margin-bottom: 100px;
+}
+
+/* CARD WITH INFORMATIONS */
+
+.contact-card {
+    padding: 39px 19px;
+}
+
+.internal-divisor {
+    transform: scale(0.8);
+}
+
+/* DIVISOR */
+
+.contact-divisor {
+    display: flex;
+    align-self: center;
+    transform: scale(0.65);
+}
+}
+
+@media (max-width: 1124px) {
 
     /* MENU HAMBURGUER */
 
