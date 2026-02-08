@@ -812,7 +812,7 @@ li>a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 27%;
+    gap: 22%;
     margin-bottom: 144px;
 }
 
@@ -919,7 +919,7 @@ li>a:hover {
 
 /* MY TAG */
 
-.footer p>a {
+.footer p > a {
     color: var(--tertiary-color);
     font-weight: 600;
 }
@@ -1375,10 +1375,315 @@ li>a:hover {
 
 }
 
-@media (max-width: 768px){
-
-}
-
 @media (max-width: 480px){
     
+    /* MENU HAMBURGUER */
+    header {
+        padding: 0 20px;
+    }
+
+    li>a {
+        font-size: 25px;
+    }
+
+    li>a:hover {
+        font-size: 30px;
+    }
+
+    .navbar {
+        top: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul {
+        gap: 80px;
+    }
+
+    .hamburger {
+        display: block;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    /* LOGO */
+    .logo {
+        transform: scale(0.9);
+        margin-left: 5px;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+    }
+    
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        margin-left: 0px;
+    }
+    
+    /* HOME SECTION */
+
+    #home {
+        align-items: center;
+    }
+
+    /* TÍTULO E SUBTÍTULO */
+
+    .home-content {
+        max-width: 306px;
+    }
+
+    .home-content h1 {
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    .primary-btn {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    .home-content p {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    /* BOTAO ENTRE EM CONTATO */
+    .arrow-btn {
+        margin-right: 0px;
+    }
+
+    /* SERVICES SECTION */
+
+    .arrow-btn.services {
+        display: none;
+    }
+
+
+    .top-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .subtitle.services {
+        text-align: center;
+    }
+
+    .services-card {
+        padding: 29px 13px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+
+    .title-container.about {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 50%;
+    }
+
+    .title.about {
+        width: 85vw;
+    }
+
+    .about-text {
+        max-width: 85vw;
+        margin-bottom: 80px;
+    }
+
+    .about-text p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .stats h3 {
+        text-align: center;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .stats p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    /* GALERIA */
+    .title-container.galery {
+        margin-bottom: 70px;
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        grid-column-gap: 0px;
+    }
+
+    .parent div {
+        max-width: 168px;
+        max-height: 245px;
+    }
+
+    /* REVIEWS SECTION */
+
+    .top-content.review {
+        flex-direction: column-reverse;
+    }
+
+    .arrow-btn {
+        padding: 10px 20px;
+    }
+
+    .arrow-btn.review:hover {
+        background: var(--tertiary-color);
+    }
+
+    .review-cards-container {
+        margin-top: 0px;
+        min-height: 600px;
+    }
+
+    .review-cards {
+        max-width: 300px;
+        max-height: 210px;
+    }
+
+    .review-cards-infos {
+        margin-top: 16px;
+    }
+
+    .review-cards-infos h3 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .review-cards-infos a {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .review-cards p {
+        min-width: 115%;
+        align-self: center;
+        margin-top: 0px;
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+    }
+
+    .quotation {
+        display: none;
+    }
+
+    .review-card-divisor {
+        transform: scale(0.65);
+        align-self: center;
+    }
+
+    /* CONTACT SECTION */
+
+    .top-content.contact {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .top-content.contact img {
+        display: none;
+    }
+
+
+    .title.contact {
+        width: 75%;
+        text-align: center;
+        margin-left: 0px;
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    /* CONTENT */
+
+    .contact-container {
+        margin-bottom: 40px;
+    }
+
+    .contact-card {
+        max-width: 300px;
+    }
+
+    .contact-card h3 {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 25px;
+    }
+
+    .work-days {
+        width: 100%;
+    }
+
+    .work-days-stats {
+        width: 100%;
+        margin-left: 20px;
+        gap: 80px;
+    }
+
+    .work-days-stats span {
+        font-size: 12px;
+        width: 100%;
+        text-align: start;
+    }
+
+    .internal-divisor {
+        transform: scale(0.6);
+    }
+
+    .contact-card a {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .primary-btn.contact {
+        font-size: 12px;
+    }
+
+    .map {
+        max-width: 280px;
+        height: 200px;
+    }
+
+    /* DIVISOR */
+
+    .footer p {
+        width: 50%;
+        font-size: 10px;
+        margin-left: 15px;
+    }
+
+    .footer-icons {
+        margin-left: 15px;
+    }
+
+    .footer-icons i {
+        font-size: 20px;
+    }
 }
