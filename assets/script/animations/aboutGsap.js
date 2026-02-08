@@ -9,7 +9,7 @@ export function aboutAnimation() {
 
         scrollTrigger: {
             trigger: '#about',
-            start: 'top 80%',
+            start: 'top 60%',
             end: "bottom 20%",
             toggleActions: 'play none none none'
         }
@@ -39,6 +39,6 @@ export function aboutAnimation() {
             duration: 0.6,
             filter: 'blur(0px)',
             ease: 'power2.out',
-        })
+        }, '-=0.2')
         .call(iniciarContadores, [], "<")
 }

@@ -87,7 +87,7 @@ body {
 /* SCROLL BAR */
 
 ::-webkit-scrollbar-track {
-    background-color: var(--secondary-color);
+    background-color: rgb(94, 94, 94);
 }
 
 ::-webkit-scrollbar {
@@ -102,7 +102,7 @@ body {
 /* HERO SECTION */
 
 /* BACKGROUND */
-.hero-wrapper {
+#hero-wrapper {
     min-height: 100vh;
     background-color: var(--primary-color);
     background: url("../images/FotoHero.png") center / cover no-repeat;

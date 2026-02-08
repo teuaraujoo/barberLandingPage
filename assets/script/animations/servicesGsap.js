@@ -11,9 +11,10 @@ export function servicesAnimate() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '#services',
-            start: 'top 80%',
-            end: 'bottom, 10%',
+            start: 'top 80%', // quando o topo da seção chega a 80% da altura da tela
+            end: 'bottom, 10%', // quando o fim da seção chega a 20% da tela
             toggleActions: 'play none none none'
+            // scrub: true -> não acontece tudo de uma vez (automático/fluído), ele acompanha o scroll entre start e end e realiza as animações
         }
     });
 

@@ -3,7 +3,9 @@ import { homeAnimate } from './animations/homeAnimate.js';
 import { servicesAnimate } from './animations/servicesGsap.js';
 import { menuHamburguer } from './animations/menu.js';
 import { aboutAnimation } from './animations/aboutGsap.js';
-// import { iniciarContadores } from './animations/contagem.js';
+import { galeryAnimation } from './animations/galeryGsap.js';
+import { reviewAnimation } from './animations/reviewGsap.js';
+import { contactAnimation } from './animations/contactGsap.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     homeAnimate();
     servicesAnimate();
     aboutAnimation();
-    // setTimeout(() => { 
-    //     iniciarContadores();
-    // }, 2000)
+    galeryAnimation();
+    reviewAnimation();
+    contactAnimation();
 });
