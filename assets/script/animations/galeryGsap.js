@@ -6,7 +6,7 @@ export function galeryAnimation() {
 
         scrollTrigger: {
             trigger: '#galery',
-            start: 'top 70%',
+            start: 'top 60%',
             end: 'bottom 20%',
             toggleActions: 'play none none nmone'
         }
