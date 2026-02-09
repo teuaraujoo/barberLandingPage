@@ -30,5 +30,5 @@ export function homeAnimate() {
             translateX: ['-1.6em', 0],
             duration: 1200
         })
-    }, 1330 /* 1530 */)
+    }, 1230 /* 1530 */)
 }
