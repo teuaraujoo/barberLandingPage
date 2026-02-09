@@ -10,7 +10,7 @@ export function iniciarContadores() {
         if (isNaN(target)) return;
 
         let current = 0;
-        const duration = 4000; 
+        const duration = 3000; 
         const increment = target / (duration / 12); // fps
 
         const attContador = () => {
