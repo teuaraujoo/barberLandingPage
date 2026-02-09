@@ -6,7 +6,7 @@ export function loader() {
     document.body.style.overflow = 'hidden';
     
     setTimeout(() => {
-        document.body.style.overflowY = 'visible';
+        document.body.style.overflow = 'visible';
     }, 1480)
 
     setTimeout(() => {
