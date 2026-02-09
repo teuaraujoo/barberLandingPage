@@ -9,7 +9,7 @@ export function aboutAnimation() {
 
         scrollTrigger: {
             trigger: '#about',
-            start: 'top 60%',
+            start: 'top 70%',
             end: "bottom 20%",
             toggleActions: 'play none none none'
         }
