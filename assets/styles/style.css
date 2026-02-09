@@ -14,6 +14,11 @@ body {
     background-color: var(--primary-color);
 }
 
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
 :root {
     --primary-font: 'Montserrat', sans-serif;
     --secondary-font: 'Inter', sans-serif;
@@ -238,7 +243,7 @@ li>a:hover {
     border: none;
     cursor: pointer;
     margin-right: 25px;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .hamburger span {
@@ -1122,7 +1127,6 @@ li>a:hover {
 
     li>a:hover {
         color: var(--tertiary-color);
-        font-size: 40px;
     }
 
     .navbar {
@@ -1386,10 +1390,6 @@ li>a:hover {
         font-size: 25px;
     }
 
-    li>a:hover {
-        font-size: 30px;
-    }
-
     .navbar {
         top: 8vh;
         display: flex;
@@ -1403,14 +1403,14 @@ li>a:hover {
 
     .hamburger {
         display: block;
-        margin-top: 20px;
+        margin-top: 35px;
         margin-right: 10px;
     }
 
     /* LOGO */
     .logo {
         transform: scale(0.9);
-        margin-left: 5px;
+        margin-left: 2px;
     }
 
     .title {
