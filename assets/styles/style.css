@@ -812,7 +812,7 @@ li>a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 27%;
+    gap: 20%;
     margin-bottom: 144px;
 }
 
@@ -997,7 +997,7 @@ li>a:hover {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1540px){
+@media (max-width: 1440px){
 
 .title-container {
     width: 20%;
@@ -1078,7 +1078,7 @@ li>a:hover {
 /* CONTENT */
 
 .contact-container {
-    gap: 10%;
+    gap: 5%;
     margin-bottom: 100px;
 }
 
