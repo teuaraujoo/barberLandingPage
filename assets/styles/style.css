@@ -371,6 +371,7 @@ li>a:hover {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    margin-bottom: var(--margin-top);
 }
 
 .services-card {
@@ -696,7 +697,7 @@ li>a:hover {
 .review-cards-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     max-width: 100%;
     margin-top: 56px;
     box-sizing: border-box;
@@ -714,6 +715,10 @@ li>a:hover {
     border-radius: 10px;
     box-sizing: border-box;
     z-index: 1;
+}
+
+.hidden {
+    display: none;
 }
 
 .review-cards::before {
